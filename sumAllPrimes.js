@@ -4,22 +4,22 @@ For example, 2 is a prime number because it is only divisible by 1 and 2. In con
 
 Rewrite sumPrimes so it returns the sum of all prime numbers that are less than or equal to num.
 */
-function sumPrimes(num){
-    let previousNumber=0;
-    let currentNumber=1;
-    let results=0;
-    while(currentNumber<=num){
-        if(currentNumber%2!==0){
-            return false;
-        }
-        else if(currentNumber%3!==0){
-            return false;
-        }
-        else{
-            result+=currentNumber;
-        }
-        currentNumber+=previousNumber;
-        previousNumber = currentNumber-previousNumber;
+function sumPrimes(num) {
+    // Helper function to check primality
+    function isPrime(num) {
+      for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i == 0)
+          return false;
+      }
+      return true;
     }
-    return result;
-}
+  
+    // Check all numbers for primality
+    let sum = 0;
+    for (let i = 2; i <= num; i++) {
+      if (isPrime(i))
+        sum += i;
+    }
+    return sum;
+  }
+console.log(sumPrimes(10))
