@@ -5,8 +5,8 @@ Return an English translated sentence of the passed binary string.
 The binary string will be space separated.
 */
 function binaryAgent(str) {
-    biString = str.split(' ')
-    uniString = []
+    var biString = str.split(' ')
+    var uniString = []
 
     for(let i=0;i<biString.length;i++){
         uniString.push(String.fromCharCode(parseInt(biString[i],2)))
