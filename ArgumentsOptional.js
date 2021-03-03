@@ -28,6 +28,6 @@ function addTogether() {
     } else {
       return addSecond
     }
-  }
+}
   
 console.log(addTogether(2,3))
