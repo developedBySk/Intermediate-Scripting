@@ -1,7 +1,8 @@
 function telephoneCheck(str){
+   
     var number = str.split(/\D/).join("")
     if(number.length>10){
-        if(number[0]===1){
+        if(number[0]==="1"){
             return true
         }
         else{
@@ -9,9 +10,11 @@ function telephoneCheck(str){
         }
     }
 
-    if(number.length===10){
+    else if(number.length===10){
         return true
     }
-    
+    else{
+        return false
+    }
 }
-console.log(telephoneCheck("(555)555-5555"))
+console.log(telephoneCheck("123**&!!asdf#"))
