@@ -5,7 +5,7 @@ function rot13(str) {
     str.toUpperCase();
 
     var decoded = str.split("");
-    
+
     for(let index = 0;index<=str.length;index++){
         for(let i = 0; i<=13; i++){
             if(str[index]===alpha[i]){
@@ -17,7 +17,6 @@ function rot13(str) {
         }
     }
     return decoded.join("");
-    
 }
   
 console.log(rot13("SERR PBQR PNZC"));
